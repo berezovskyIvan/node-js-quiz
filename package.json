@@ -1,0 +1,27 @@
+{
+  "name": "node-js-back-end",
+  "version": "1.0.0",
+  "description": "NodeJS Server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berezovskyIvan/node-js-quiz.git"
+  },
+  "author": "berezovskiy_ia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berezovskyIvan/node-js-quiz/issues"
+  },
+  "homepage": "https://github.com/berezovskyIvan/node-js-quiz#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "server-destroy": "^1.0.1"
+  }
+}
