@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vue-js-tests-278719",
+  "private_key_id": "7005e7c5582f7063937c5d058ae27b026e6ea10c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDA8jufB9Y284Lq\nH/Le0Io/QqvDsNp3Sz1Hb5uWROGoGICO210FyQgAENXyo//1/f5/2shqhZQWeIAj\n3I2Tr2lVcgN7/Xo4nCdpbnBspKNh82PSRyjoXteIKihz0gvfhJq+vKxq0OoAgh55\nTeswHCMIMGjJEb6cDxDV3ESlPkFbTQJnYrFEXC5xD/L4CA2vjbnzYVT+I7FCmOOd\nXzk4EpDWSjnbKCGYnXZLQo1olGXsaQ62gzFdn2aD+IrUF9RFcjVMrG8ZPrGrKef/\n/ZTjOyBidHtMli3ZfDh6Pfd0FSqQEKEww6vt8HuvfWZ2Kw2Ia38+e1GynNpgl/Bk\nZs+jvayxAgMBAAECggEABFnyKkX8+MRJIYqS6Z9+XqrcQM+OPb5+pUvJEHyBMk9L\nJu2fjW/ZNFcs3AoCzcNqp+uBNZXJnzAcg7KHptr/3yNxHKy8wuYSpXgOJQUZgi4B\nBE8ChysMZU++Fc6Y4fOVodOTd906ScSld0rgkPcxew/MbSxvRgm48XnEOo3K34o1\nC2ZcBDTnjyGhySlDXp5MWufq7TTOawUAkeb7PugPDL3bb/G5a/hVBlUDkQw/6uDA\nWvZ1cExQhsvyggBUv3IeUEcPI/y54B2h234ctdAVdijqIqrfjIRzXxDkM7Doy3Yh\nSqvH31KIc2RgXBueY0BLYRITNGet8l5dErf2g4D8AQKBgQDeRNtDbZTmAn+glwY+\nITDCo0lx1q/qgc2mHuyTu4EWliXrbFY4/CRfoQlt2sKQ7fxbUWcnw5DU5dh8mV3k\nyZr1txrrDj/21HoQesgDoxQqchcXn7zYiynEvAWwk/fgllYfbBsmvpWQ069U7scr\nBvHdJs9CskHhL83ILo3hXgdOoQKBgQDeOjA723f+o7SJUkanvS/DfRRzwrEoICh/\nJ+wJ91G+s6/hWMtvxAG/8kVD6rDBZjukjHWwcTkI8CSt72i+rZML5mQ8gBso2jx9\nmrEzu1aLjC+cjzqjWssGA3UGsB3lzDAoQS59BsEmG7+P4tjjDETeen6hc47f5N8J\n4odPXFD0EQKBgQDB8XElX9vZ63ozxTPkSI/EdjhixcLQLB0mg7tImQblj3Rc/TYr\nGRAgBWM14Pl+/roBcIFDOCkLK9d/uU8tkCDPoMszKUb0+Kfd81TNn6G7+7tcmLxu\ncteqW6nXTvWumV9iobD7WLcnHR7TTFqrl665muCkwOgtNsonjz+r06EqoQKBgQDU\ns81G/aG00OwUI/QMyT/WVPomcssuJNmeG5AJWfecGFDX2C2gJHOoTTOO9iuIcVnU\n/bwHzddRfskc0nHnUCvW0AZRAiz8xSXw8wd5BG6p0twfddgiUtzQPK7eX+O999qA\nLSNZ+AUXfKe2COKfLzcb2xMpZXnzQxVYWMI6a5nwgQKBgQDMkmpeu9Uk/S4YRO8Q\n0giu4c5FNFuIFGYhWuN+J1gRRZKm0NtWINAETz7+qDiX8x18F8sbEGSNyqVYImKh\n+vJUxq1XmOfUoGBuHxUWUrTe9lCJ16Ii7KPla2p16+7V0agQ1jCsPSAhWdy63r3U\nVFxaOzC1s8FbjAGlbBPMp2F+/g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "node-js-quiz@vue-js-tests-278719.iam.gserviceaccount.com",
+  "client_id": "102508178501978496238",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/node-js-quiz%40vue-js-tests-278719.iam.gserviceaccount.com"
+}
