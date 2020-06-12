@@ -32,3 +32,8 @@ const router = require('./router/index')
 for (const key in router) {
   app.use(router[key].path, router[key].router)
 }
+
+/*
+  pg client starting
+ */
+const pgClient = require('./src/pg')

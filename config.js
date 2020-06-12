@@ -8,5 +8,12 @@ module.exports = {
     version: 'v4',
     url: 'https://www.googleapis.com/auth/spreadsheets',
     availableSheets: ['MainPage', 'Questions', 'ResultPage', 'Settings']
+  },
+  pg: {
+    host: 'localhost',
+    database: 'quiz_database',
+    user: 'postgres',
+    password: 'postgres',
+    port: 5432
   }
 }

@@ -31,7 +31,7 @@ router.get('/login-url', (req, res) => {
   const url = oAuth2Client.generateAuthUrl({
     scope: [googleSpreadsheets.url]
   })
-  console.log('url', url)
+
   sendResult(res, 200, 'Ok', url)
 })
 
