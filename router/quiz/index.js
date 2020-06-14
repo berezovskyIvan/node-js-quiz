@@ -144,7 +144,7 @@ router.put('/update', async (req, res) => {
   const urlArr = url.split('/')
   const sheetId = urlArr[urlArr.length - 2]
   const description = body.description
-  const pastSheetId = body.pastSheetId + 1
+  const pastSheetId = body.pastSheetId
 
   getSpreadsheet(sheetId).then(async data => {
     const pages = {
@@ -199,7 +199,6 @@ router.delete('/delete', async (req, res) => {
   const query = req.query
   const token = req.headers['x-auth-token']
   const isAuth = await checkAuth(token)
-  console.log('body', req.body)
 
   if (!isAuth) {
     return sendResult(res, 401, 'Unauthorized')
