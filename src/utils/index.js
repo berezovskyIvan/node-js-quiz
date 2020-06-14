@@ -1,4 +1,4 @@
-function jsonParser (val) {
+function jsonParse (val) {
   try {
     return JSON.parse(val)
   } catch (err) {
@@ -9,5 +9,5 @@ function jsonParser (val) {
 }
 
 module.exports = {
-  jsonParser
+  jsonParse
 }

@@ -6,7 +6,7 @@ module.exports = {
   },
   googleSpreadsheets: {
     version: 'v4',
-    url: 'https://www.googleapis.com/auth/spreadsheets',
+    url: 'https://www.googleapis.com/auth/spreadsheets.readonly',
     availableSheets: ['MainPage', 'Questions', 'ResultPage', 'Settings']
   },
   pg: {
