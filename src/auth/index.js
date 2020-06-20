@@ -23,12 +23,21 @@ async function checkAuth(token) {
     const auth =  await oauth2.userinfo.get()
 
     if (auth && auth.status === 200) {
-      return true
+      return {
+        is: true,
+        data: auth.data
+      }
     } else {
-      return false
+      return {
+        is: false,
+        data: null
+      }
     }
   } catch {
-    return false
+    return {
+      is: false,
+      data: null
+    }
   }
 }
 

@@ -8,6 +8,12 @@ function jsonParse (val) {
   }
 }
 
+function checkSheetKey (key) {
+  const req = /^[a-z][a-z0-9-]*$/i
+  return req.test(key)
+}
+
 module.exports = {
-  jsonParse
+  jsonParse,
+  checkSheetKey
 }
