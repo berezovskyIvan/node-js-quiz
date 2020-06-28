@@ -5,7 +5,7 @@ const { getQuizByKeyQuery } = require('./querys')
 const { updateQuizQuery } = require('./querys')
 const { deleteQuizQuery } = require('./querys')
 const { publishQuizQuery } = require('./querys')
-
+const { stopPublishingQuizQuery } = require('./querys')
 const { jsonParse } = require('../../src/utils')
 
 function getPage (pageData, name) {
@@ -56,6 +56,13 @@ async function publishQuiz (sheetId, key) {
   return result
 }
 
+async function stopPublishingQuiz (sheetId) {
+  const query = stopPublishingQuizQuery(sheetId)
+  const result = await client.query(query)
+
+  return result
+}
+
 module.exports = {
   getPage,
   insertQuiz,
@@ -63,5 +70,6 @@ module.exports = {
   getQuizByKey,
   updateQuiz,
   deleteQuiz,
-  publishQuiz
+  publishQuiz,
+  stopPublishingQuiz
 }

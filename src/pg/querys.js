@@ -40,6 +40,12 @@ const publishQuizQuery = function (sheetId, key) {
     WHERE sheet_id = '${sheetId}'`
 }
 
+const stopPublishingQuizQuery = function (sheetId) {
+  return `UPDATE quiz_table SET
+      is_publish = false
+    WHERE sheet_id = '${sheetId}'`
+}
+
 module.exports = {
   insertQuizQuery,
   getMyQuizzesQuery,
@@ -47,4 +53,5 @@ module.exports = {
   updateQuizQuery,
   deleteQuizQuery,
   publishQuizQuery,
+  stopPublishingQuizQuery
 }

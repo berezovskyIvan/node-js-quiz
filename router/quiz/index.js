@@ -31,6 +31,7 @@ const { getQuizByKey } = require('../../src/pg/methods')
 const { updateQuiz } = require('../../src/pg/methods')
 const { deleteQuiz } = require('../../src/pg/methods')
 const { publishQuiz } = require('../../src/pg/methods')
+const { stopPublishingQuiz } = require('../../src/pg/methods')
 
 /*
   quiz: post
@@ -239,7 +240,7 @@ router.patch('/publish', async (req, res) => {
   }
 
   if (!body || !body.key) {
-    const message = 'Spreadsheet id is required parameter'
+    const message = 'Quiz key is required parameter'
     return sendResult(res, 400, 'Bad Request', message)
   }
 
@@ -251,6 +252,32 @@ router.patch('/publish', async (req, res) => {
   const sheetId = body.sheetId
   const key = body.key
   const data = await publishQuiz(sheetId, key)
+
+  if (data && data.rowCount > 0) {
+    sendResult(res, 200, 'Ok', true)
+  } else if (data && !data.rowCount) {
+    sendResult(res, 404, 'Not found')
+  } else {
+    sendResult(res, 500, 'Internal Server Error', false)
+  }
+})
+
+router.patch('/stop-publishing', async (req, res) => {
+  const body = req.body
+  const token = req.headers['access-token']
+  const isAuth = (await checkAuth(token)).is
+
+  if (!isAuth) {
+    return sendResult(res, 401, 'Unauthorized')
+  }
+
+  if (!body || !body.sheetId) {
+    const message = 'Spreadsheet id is required parameter'
+    return sendResult(res, 400, 'Bad Request', message)
+  }
+
+  const sheetId = body.sheetId
+  const data = await stopPublishingQuiz(sheetId)
 
   if (data && data.rowCount > 0) {
     sendResult(res, 200, 'Ok', true)
