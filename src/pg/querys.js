@@ -1,6 +1,7 @@
 const insertQuizQuery = function (userId, sheetId, description, pages) {
   return `INSERT INTO quiz_table (user_id, sheet_id, description, main_page, questions_page, result_page, settings_page)
-    VALUES ('${userId}', '${sheetId}', '${description}', '${pages.main}', '${pages.questions}', '${pages.result}', '${pages.settings}')`
+  VALUES
+  ($$${userId}$$, $$${sheetId}$$, $$${description}$$, $$${pages.main}$$, $$${pages.questions}$$, $$${pages.result}$$, $$${pages.settings}$$)`
 }
 
 const getMyQuizzesQuery = function (id) {
