@@ -185,6 +185,7 @@ router.put('/update', async (req, res) => {
       result: getPage(data, 'ResultPage'),
       settings: getPage(data, 'Settings')
     }
+
     const updateStatus = await updateQuiz(userId, sheetId, description, pages, pastSheetId)
 
     if (updateStatus.rowCount > 0) {
@@ -251,14 +252,21 @@ router.patch('/publish', async (req, res) => {
 
   const sheetId = body.sheetId
   const key = body.key
-  const data = await publishQuiz(sheetId, key)
 
-  if (data && data.rowCount > 0) {
-    sendResult(res, 200, 'Ok', true)
-  } else if (data && !data.rowCount) {
-    sendResult(res, 404, 'Not found')
-  } else {
-    sendResult(res, 500, 'Internal Server Error', false)
+  try {
+    const data = await publishQuiz(sheetId, key)
+
+    if (data && data.rowCount > 0) {
+      sendResult(res, 200, 'Ok', true)
+    } else if (data && !data.rowCount) {
+      sendResult(res, 404, 'Not found')
+    } else {
+      sendResult(res, 500, 'Internal Server Error', false)
+    }
+  } catch (err) {
+    const message = err.detail
+
+    sendResult(res, 409, 'Conflict', message)
   }
 })
 

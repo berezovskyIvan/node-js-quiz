@@ -21,13 +21,13 @@ const getQuizByKeyQuery = function (key) {
 
 const updateQuizQuery = function (userId, sheetId, description, pages, pastSheetId) {
   return `UPDATE quiz_table SET
-      sheet_id = '${sheetId}',
-      description = '${description}',
-      main_page = '${pages.main}',
-      questions_page = '${pages.questions}',
-      result_page = '${pages.result}',
-      settings_page = '${pages.settings}'
-    WHERE sheet_id = '${pastSheetId}'`
+      sheet_id = $$${sheetId}$$,
+      description = $$${description}$$,
+      main_page = $$${pages.main}$$,
+      questions_page = $$${pages.questions}$$,
+      result_page = $$${pages.result}$$,
+      settings_page = $$${pages.settings}$$
+    WHERE sheet_id = $$${pastSheetId}$$`
 }
 
 const deleteQuizQuery = function (userId, sheetId) {
