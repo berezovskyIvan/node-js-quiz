@@ -5,7 +5,7 @@ const insertQuizQuery = function (userId, sheetId, description, pages) {
 }
 
 const getMyQuizzesQuery = function (id) {
-  return `SELECT * FROM quiz_table WHERE user_id = '${id}'`
+  return `SELECT * FROM quiz_table WHERE user_id = $$${id}$$`
 }
 
 const getQuizByKeyQuery = function (key) {
@@ -16,7 +16,7 @@ const getQuizByKeyQuery = function (key) {
       result_page,
       settings_page
     FROM quiz_table
-    WHERE is_publish = true AND key = '${key}'`
+    WHERE is_publish = true AND key = $$${key}$$`
 }
 
 const updateQuizQuery = function (userId, sheetId, description, pages, pastSheetId) {
@@ -31,20 +31,20 @@ const updateQuizQuery = function (userId, sheetId, description, pages, pastSheet
 }
 
 const deleteQuizQuery = function (userId, sheetId) {
-  return `DELETE FROM quiz_table WHERE user_id='${userId}' AND sheet_id='${sheetId}'`
+  return `DELETE FROM quiz_table WHERE user_id=$$${userId}$$ AND sheet_id=$$${sheetId}$$`
 }
 
 const publishQuizQuery = function (sheetId, key) {
   return `UPDATE quiz_table SET
       is_publish = true,
-      key = '${key}'
-    WHERE sheet_id = '${sheetId}'`
+      key = $$${key}$$
+    WHERE sheet_id = $$${sheetId}$$`
 }
 
 const stopPublishingQuizQuery = function (sheetId) {
   return `UPDATE quiz_table SET
       is_publish = false
-    WHERE sheet_id = '${sheetId}'`
+    WHERE sheet_id = $$${sheetId}$$`
 }
 
 module.exports = {

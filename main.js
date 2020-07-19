@@ -37,3 +37,11 @@ for (const key in router) {
   pg client starting
  */
 const pgClient = require('./src/pg')
+
+/*
+  swagger
+ */
+
+const swagger = require('./swagger')
+
+swagger(app)
